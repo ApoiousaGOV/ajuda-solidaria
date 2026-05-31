@@ -1,30 +1,40 @@
-#<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apoio Solidário</title>
     <style>
-        body { font-family: sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 20px; }
-        .card { background: #fff; width: 100%; max-width: 400px; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
-        h1 { color: #333; }
-        button { background: #059669; color: white; padding: 15px; border: none; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; font-size: 16px; margin-top: 20px; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; padding: 20px; }
+        .card { background: #fff; width: 100%; max-width: 450px; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: #2c3e50; margin-bottom: 20px; }
+        p { color: #555; line-height: 1.6; font-size: 16px; margin-bottom: 15px; }
+        .destaque { font-weight: bold; color: #059669; }
+        .btn-pix { background: #059669; color: white; padding: 18px; border: none; border-radius: 12px; width: 100%; font-weight: bold; cursor: pointer; font-size: 18px; transition: 0.3s; }
+        .btn-pix:hover { background: #047857; }
+        #aviso { margin-top: 15px; font-weight: bold; color: #059669; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Solidariedade</h1>
-        <p>Sua doação ajuda a transformar vidas. Obrigado pelo apoio!</p>
-        <button onclick="copiar()">CLIQUE AQUI PARA DOAR (PIX)</button>
-        <p id="aviso"></p>
-    </div>
 
-    <script>
-        function copiar() {
-            const chave = "COLOQUE_SUA_CHAVE_PIX_AQUI"; 
-            navigator.clipboard.writeText(chave);
-            document.getElementById('aviso').innerText = "Chave copiada! Obrigado pela ajuda.";
-        }
-    </script>
+<div class="card">
+    <h1>Corrente do Bem ❤️</h1>
+    <p>Sua solidariedade tem o poder de transformar muitas vidas. Este projeto existe para levar apoio a <strong>crianças, animais em situação de rua e docentes</strong> que precisam de suporte.</p>
+    <p class="destaque">Qualquer quantia é muito válida e fará toda a diferença!</p>
+    
+    <button class="btn-pix" onclick="copiar()">CLIQUE AQUI PARA COPIAR O PIX</button>
+    <p id="aviso"></p>
+</div>
+
+<script>
+    function copiar() {
+        // COLOQUE SUA CHAVE PIX ABAIXO ENTRE AS ASPAS:
+        const chave = "SUA_CHAVE_PIX_AQUI"; 
+        
+        navigator.clipboard.writeText(chave);
+        document.getElementById('aviso').innerText = "Chave copiada! Obrigado pela sua generosidade!";
+    }
+</script>
+
 </body>
-</html> ajuda-solidaria
+</html>
