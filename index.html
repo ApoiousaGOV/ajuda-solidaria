@@ -5,83 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corrente do Bem</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #f4f7f6; 
-            display: flex; 
-            justify-content: center; 
-            padding: 20px;
-        }
-        .card { 
-            background: #ffffff; 
-            width: 100%; 
-            max-width: 500px; 
-            padding: 30px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        h1 { color: #2c3e50; margin-bottom: 20px; font-size: 24px; }
-        p { color: #555; line-height: 1.6; font-size: 16px; margin-bottom: 20px; }
-        .destaque { font-weight: bold; color: #2c3e50; }
-        
-        /* Botão posicionado acima */
-        .btn-pix { 
-            background: #059669; 
-            color: white; 
-            padding: 15px 25px; 
-            border: none; 
-            border-radius: 12px; 
-            font-weight: bold; 
-            cursor: pointer; 
-            width: 100%;
-            font-size: 16px;
-            margin-bottom: 30px;
-            transition: background 0.3s;
-        }
+        body { font-family: sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; padding: 20px; }
+        .card { background: #ffffff; width: 100%; max-width: 500px; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; }
+        .btn-pix { background: #059669; color: white; padding: 15px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; width: 100%; margin: 20px 0; font-size: 16px; }
         .btn-pix:hover { background: #047857; }
-        #aviso { margin-top: 10px; font-weight: bold; color: #059669; height: 20px; }
-
-        .galeria { margin-top: 20px; }
-        .galeria img { 
-            width: 100%; 
-            border-radius: 12px; 
-            margin-bottom: 12px; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .galeria img:hover { transform: scale(1.02); }
+        .galeria img { width: 100%; border-radius: 12px; margin-bottom: 10px; display: block; }
     </style>
 </head>
 <body>
-
 <div class="card">
     <h1>Corrente do Bem ❤️</h1>
-    <p>Sua solidariedade tem o poder de transformar vidas. Este projeto busca levar apoio a quem mais precisa.</p>
-    <p class="destaque">Qualquer quantia é muito bem-vinda e fará toda a diferença!</p>
-
-    <!-- Botão agora fica aqui, logo após o texto -->
+    <p>Sua solidariedade transforma vidas. Clique abaixo para copiar o código Pix:</p>
+    
     <button class="btn-pix" onclick="copiar()">CLIQUE AQUI PARA COPIAR O PIX</button>
     <p id="aviso"></p>
 
     <div class="galeria">
-        <img src="063d0c70-1bea-44ef-82c8-7f0d3125b743.jpeg" alt="Animal em tratamento">
-        <img src="1000138414.jpg" alt="Animal em tratamento">
-        <img src="1000138419.png" alt="Animal em tratamento">
-        <img src="3f402980-15ba-48ca-b30b-e0ffb50228e1.jpeg" alt="Animal em tratamento">
-        <img src="6e6cb1cb-c5fa-4383-8d4a-943352cd2aec.jpeg" alt="Animal em tratamento">
-        <img src="a5b38671-c216-4391-8e1d-3e3737136955.jpeg" alt="Animal em tratamento">
-        <img src="d740c41d-9884-4c00-a53e-09fe6bdf34cc.jpeg" alt="Animal em tratamento">
+        <img src="063d0c70-1bea-44ef-82c8-7f0d3125b743.jpeg" alt="Foto">
+        <img src="1000138414.jpg" alt="Foto">
+        <img src="1000138419.png" alt="Foto">
+        <img src="3f402980-15ba-48ca-b30b-e0ffb50228e1.jpeg" alt="Foto">
+        <img src="6e6cb1cb-c5fa-4383-8d4a-943352cd2aec.jpeg" alt="Foto">
+        <img src="a5b38671-c216-4391-8e1d-3e3737136955.jpeg" alt="Foto">
+        <img src="d740c41d-9884-4c00-a53e-09fe6bdf34cc.jpeg" alt="Foto">
     </div>
 </div>
-
 <script>
     function copiar() {
-        const chave = '00020126580014br.gov.bcb.pix01368a92fdf1-bdf7-466d-9d17-298d50f26f04520400005303986';
-        navigator.clipboard.writeText(chave);
-        document.getElementById('aviso').innerText = "Chave copiada! Obrigado pela sua generosidade!";
+        const pix = '00020126470014BR.GOV.BCB.PIX0125deividkratos000@gmail.com5204000053039865802BR5919DEIVID ARRUDA CAJUI6015PORTO SEGURO (T62070503***6304A3AB';
+        navigator.clipboard.writeText(pix).then(() => {
+            document.getElementById('aviso').innerText = "Código copiado com sucesso! Pode colar no seu banco.";
+        });
     }
 </script>
-
 </body>
 </html>
