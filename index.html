@@ -24,15 +24,8 @@
         h1 { color: #2c3e50; margin-bottom: 20px; font-size: 24px; }
         p { color: #555; line-height: 1.6; font-size: 16px; margin-bottom: 20px; }
         .destaque { font-weight: bold; color: #2c3e50; }
-        .galeria { margin: 20px 0; }
-        .galeria img { 
-            width: 100%; 
-            border-radius: 12px; 
-            margin-bottom: 12px; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .galeria img:hover { transform: scale(1.02); }
+        
+        /* Botão posicionado acima */
         .btn-pix { 
             background: #059669; 
             color: white; 
@@ -43,10 +36,21 @@
             cursor: pointer; 
             width: 100%;
             font-size: 16px;
+            margin-bottom: 30px;
             transition: background 0.3s;
         }
         .btn-pix:hover { background: #047857; }
-        #aviso { margin-top: 15px; font-weight: bold; color: #059669; height: 20px; }
+        #aviso { margin-top: 10px; font-weight: bold; color: #059669; height: 20px; }
+
+        .galeria { margin-top: 20px; }
+        .galeria img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin-bottom: 12px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .galeria img:hover { transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -55,6 +59,10 @@
     <h1>Corrente do Bem ❤️</h1>
     <p>Sua solidariedade tem o poder de transformar vidas. Este projeto busca levar apoio a quem mais precisa.</p>
     <p class="destaque">Qualquer quantia é muito bem-vinda e fará toda a diferença!</p>
+
+    <!-- Botão agora fica aqui, logo após o texto -->
+    <button class="btn-pix" onclick="copiar()">CLIQUE AQUI PARA COPIAR O PIX</button>
+    <p id="aviso"></p>
 
     <div class="galeria">
         <img src="063d0c70-1bea-44ef-82c8-7f0d3125b743.jpeg" alt="Animal em tratamento">
@@ -65,9 +73,6 @@
         <img src="a5b38671-c216-4391-8e1d-3e3737136955.jpeg" alt="Animal em tratamento">
         <img src="d740c41d-9884-4c00-a53e-09fe6bdf34cc.jpeg" alt="Animal em tratamento">
     </div>
-
-    <button class="btn-pix" onclick="copiar()">CLIQUE AQUI PARA COPIAR O PIX</button>
-    <p id="aviso"></p>
 </div>
 
 <script>
