@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Solidário</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 20px; }
+        .card { background: #fff; width: 100%; max-width: 400px; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: #333; }
+        button { background: #059669; color: white; padding: 15px; border: none; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; font-size: 16px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Solidariedade</h1>
+        <p>Sua doação ajuda a transformar vidas. Obrigado pelo apoio!</p>
+        <button onclick="copiar()">CLIQUE AQUI PARA DOAR (PIX)</button>
+        <p id="aviso"></p>
+    </div>
+
+    <script>
+        function copiar() {
+            const chave = "COLOQUE_SUA_CHAVE_PIX_AQUI"; 
+            navigator.clipboard.writeText(chave);
+            document.getElementById('aviso').innerText = "Chave copiada! Obrigado pela ajuda.";
+        }
+    </script>
+</body>
+</html>
